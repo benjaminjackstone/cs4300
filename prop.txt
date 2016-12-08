@@ -1,0 +1,576 @@
+#http://www.logic-puzzles.org/game.php?u2=1e8b18b4b0b1a6e016279c710dce2b87
+#Story
+#	Porter is a "tiny home" enthusiast - he builds small, portable homes and sells 
+# them to others interested in the movement. Using only the clues below, determine the size 
+# and cost of each of his customer's tiny homes, as well as the city it will be delivered to.
+#
+#
+# Home Owners 
+# Davidson, Kirby, Pratt, Zimmerman
+#names are: I, K, P, Z respectively
+#
+# Home Sizes
+# 95, 110, 125, 140
+# sizes are E, F, G, H respectively
+#
+# Costs
+# 25k, 32.25k, 35k, 36k
+# prices represented as A, B, C, D respectively
+#
+# Question: Size and Cost and Location of tiny homes? 
+#
+#	The four houses are the 110 sq ft structure, the $25,000 house, the Kirby's 
+#	home and the Pratt's home. So this is the statement encoded in the question: (??F & ??A & K?? & P??)
+#
+# # Clues: 
+#	1. The Pratt's house is either the 95 sq ft home or the $35,000 home.
+#	2. The four houses are the 110 sq ft structure, the $25,000 house, the Kirby's 
+#	home and the Pratt's home. (??F & ??A & K?? & P??) => 
+#	3. The Davidson's home is 15 sq ft larger than the $25,000 house.
+#	4. The Davidson's house sold for $36,000.
+#	5. The 140 sq ft structure sold for $35,000.
+#
+# Glossary of terms 
+# FC	: (F)amily and (C)ost of home. 4*4 16 statements
+#		KA would meand that the Kirby's have or sold house at $25,000
+# FS	: (F)amily and (S)ize of home. 4*4 16 statements
+#		KE would meand that the Kirby's home is 95sqft
+# FCS	: (F)amily and (C)ost and (S)ize. 4*4*4 64 statements
+#		KEA would meand that the Kirby's have or sold house at $25,000 which is 95sqft
+#
+# load physics statements
+load phys.txt
+#
+# Clues
+#
+# 1. The Pratt's house is either the 95 sq ft home or the $35,000 home.
+#
+tell ((PE) | (PC))
+tell (PC) => (!PE)
+tell (PE) => (!PC)
+#
+# 2. The four houses are the 110 sq ft structure, the $25,000 house, the Kirby's and pratt
+tell (ZA) => ((!ZF) & (!IA))
+tell (IA) => ((!IF) & (!ZA))
+tell (IF) => ((!ZF) & (!IA))
+tell (ZF) => ((!IF) & (!ZA))
+tell (((!KF) & (!KA) & (!PF) & (!PA)) & (IF | ZF) & (IA | ZA))
+#
+# 3. The Davidson's home is 15 sq ft larger than the $25,000 house.
+#
+tell ((!IE) & (!IA) & (!AH))
+tell (IF) => (AE)
+tell (IG) => (AF)
+tell (IH) => (AG)
+tell (IF | IG | IH)
+tell (AE | AF | AG)
+#
+# 4. The Davidson's house sold for $36,000.
+tell (ID)
+#
+#5. The 140 sq ft structure sold for $35,000.
+tell (CH)
+#
+#
+#
+echo Find the cost and size for each customer's tiny home
+echo should be 4 entailed
+dpll (IE & IA)
+dpll (IE & IB)
+dpll (IE & IC)
+dpll (IE & ID)
+dpll (IF & IA)
+dpll (IF & IB)
+dpll (IF & IC)
+dpll (IF & ID)
+dpll (IG & IA)
+dpll (IG & IB)
+dpll (IG & IC)
+dpll (IG & ID)
+dpll (IH & IA)
+dpll (IH & IB)
+dpll (IH & IC)
+dpll (IH & ID)
+dpll (KE & KA)
+dpll (KE & KB)
+dpll (KE & KC)
+dpll (KE & KD)
+dpll (KF & KA)
+dpll (KF & KB)
+dpll (KF & KC)
+dpll (KF & KD)
+dpll (KG & KA)
+dpll (KG & KB)
+dpll (KG & KC)
+dpll (KG & KD)
+dpll (KH & KA)
+dpll (KH & KB)
+dpll (KH & KC)
+dpll (KH & KD)
+dpll (PE & PA)
+dpll (PE & PB)
+dpll (PE & PC)
+dpll (PE & PD)
+dpll (PF & PA)
+dpll (PF & PB)
+dpll (PF & PC)
+dpll (PF & PD)
+dpll (PG & PA)
+dpll (PG & PB)
+dpll (PG & PC)
+dpll (PG & PD)
+dpll (PH & PA)
+dpll (PH & PB)
+dpll (PH & PC)
+dpll (PH & PD)
+dpll (ZE & ZA)
+dpll (ZE & ZB)
+dpll (ZE & ZC)
+dpll (ZE & ZD)
+dpll (ZF & ZA)
+dpll (ZF & ZB)
+dpll (ZF & ZC)
+dpll (ZF & ZD)
+dpll (ZG & ZA)
+dpll (ZG & ZB)
+dpll (ZG & ZC)
+dpll (ZG & ZD)
+dpll (ZH & ZA)
+dpll (ZH & ZB)
+dpll (ZH & ZC)
+dpll (ZH & ZD)
+#
+echo
+echo negation should have 4 not entailed
+dpll !(IE & IA)
+dpll !(IE & IB)
+dpll !(IE & IC)
+dpll !(IE & ID)
+dpll !(IF & IA)
+dpll !(IF & IB)
+dpll !(IF & IC)
+dpll !(IF & ID)
+dpll !(IG & IA)
+dpll !(IG & IB)
+dpll !(IG & IC)
+dpll !(IG & ID)
+dpll !(IH & IA)
+dpll !(IH & IB)
+dpll !(IH & IC)
+dpll !(IH & ID)
+dpll !(KE & KA)
+dpll !(KE & KB)
+dpll !(KE & KC)
+dpll !(KE & KD)
+dpll !(KF & KA)
+dpll !(KF & KB)
+dpll !(KF & KC)
+dpll !(KF & KD)
+dpll !(KG & KA)
+dpll !(KG & KB)
+dpll !(KG & KC)
+dpll !(KG & KD)
+dpll !(KH & KA)
+dpll !(KH & KB)
+dpll !(KH & KC)
+dpll !(KH & KD)
+dpll !(PE & PA)
+dpll !(PE & PB)
+dpll !(PE & PC)
+dpll !(PE & PD)
+dpll !(PF & PA)
+dpll !(PF & PB)
+dpll !(PF & PC)
+dpll !(PF & PD)
+dpll !(PG & PA)
+dpll !(PG & PB)
+dpll !(PG & PC)
+dpll !(PG & PD)
+dpll !(PH & PA)
+dpll !(PH & PB)
+dpll !(PH & PC)
+dpll !(PH & PD)
+dpll !(ZE & ZA)
+dpll !(ZE & ZB)
+dpll !(ZE & ZC)
+dpll !(ZE & ZD)
+dpll !(ZF & ZA)
+dpll !(ZF & ZB)
+dpll !(ZF & ZC)
+dpll !(ZF & ZD)
+dpll !(ZG & ZA)
+dpll !(ZG & ZB)
+dpll !(ZG & ZC)
+dpll !(ZG & ZD)
+dpll !(ZH & ZA)
+dpll !(ZH & ZB)
+dpll !(ZH & ZC)
+dpll !(ZH & ZD)
+#
+echo We know that the Kirby's & Pratt's have homes of unkown size and price.  We also know that one house is 110sqft and the other is 25K.
+echo
+echo We should find 1 home entailed for the Kirby's or'K'
+dpll (KEA)
+echo
+dpll (KEB)
+echo
+dpll (KEC)
+echo
+dpll (KED)
+echo
+dpll (KFA)
+echo
+dpll (KFB)
+echo
+dpll (KFC)
+echo
+dpll (KFD)
+echo
+dpll (KGA)
+echo
+dpll (KGB)
+echo
+dpll (KGC)
+echo
+dpll (KGD)
+echo
+dpll (KHA)
+echo
+dpll (KHB)
+echo
+dpll (KHC)
+echo
+dpll (KHD)
+echo
+echo
+echo We should find 1 home not entailed for the Kirby's or 'K'
+dpll !(KEA)
+echo
+dpll !(KEB)
+echo
+dpll !(KEC)
+echo
+dpll !(KED)
+echo
+dpll !(KFA)
+echo
+dpll !(KFB)
+echo
+dpll !(KFC)
+echo
+dpll !(KFD)
+echo
+dpll !(KGA)
+echo
+dpll !(KGB)
+echo
+dpll !(KGC)
+echo
+dpll !(KGD)
+echo
+dpll !(KHA)
+echo
+dpll !(KHB)
+echo
+dpll !(KHC)
+echo
+dpll !(KHD)
+echo
+echo
+echo We should find 1 home entailed that is 110sqft or 'F'
+dpll (IFA)
+echo
+dpll (IFB)
+echo
+dpll (IFC)
+echo
+dpll (IFD)
+echo
+dpll (KFA)
+echo
+dpll (KFB)
+echo
+dpll (KFC)
+echo
+dpll (KFD)
+echo
+dpll (PFA)
+echo
+dpll (PFB)
+echo
+dpll (PFC)
+echo
+dpll (PFD)
+echo
+dpll (ZFA)
+echo
+dpll (ZFB)
+echo
+dpll (ZFC)
+echo
+dpll (ZFD)
+echo
+echo We should find 1 home not entailed that is 110sqft or 'F'
+dpll !(IFA)
+echo
+dpll !(IFB)
+echo
+dpll !(IFC)
+echo
+dpll !(IFD)
+echo
+dpll !(KFA)
+echo
+dpll !(KFB)
+echo
+dpll !(KFC)
+echo
+dpll !(KFD)
+echo
+dpll !(PFA)
+echo
+dpll !(PFB)
+echo
+dpll !(PFC)
+echo
+dpll !(PFD)
+echo
+dpll !(ZFA)
+echo
+dpll !(ZFB)
+echo
+dpll !(ZFC)
+echo
+dpll !(ZFD)
+echo
+echo We should find 1 home entailed that cost 25K or 'A'
+dpll (IEA)
+echo
+dpll (IFA)
+echo
+dpll (IGA)
+echo
+dpll (IHA)
+echo
+dpll (KEA)
+echo
+dpll (KFA)
+echo
+dpll (KGA)
+echo
+dpll (KHA)
+echo
+dpll (PEA)
+echo
+dpll (PFA)
+echo
+dpll (PGA)
+echo
+dpll (PHA)
+echo
+dpll (ZEA)
+echo
+dpll (ZFA)
+echo
+dpll (ZGA)
+echo
+dpll (ZHA)
+echo
+echo We should find 1 home not entailed that cost 25K or 'A'
+dpll !(IEA)
+echo
+dpll !(IFA)
+echo
+dpll !(IGA)
+echo
+dpll !(IHA)
+echo
+dpll !(KEA)
+echo
+dpll !(KFA)
+echo
+dpll !(KGA)
+echo
+dpll !(KHA)
+echo
+dpll !(PEA)
+echo
+dpll !(PFA)
+echo
+dpll !(PGA)
+echo
+dpll !(PHA)
+echo
+dpll !(ZEA)
+echo
+dpll !(ZFA)
+echo
+dpll !(ZGA)
+echo
+dpll !(ZHA)
+echo
+echo We should find 1 home entailed that belongs to the Pratt's or 'P'
+dpll (PEA)
+echo
+dpll (PFA)
+echo
+dpll (PGA)
+echo
+dpll (PHA)
+echo
+dpll (PEB)
+echo
+dpll (PFB)
+echo
+dpll (PGB)
+echo
+dpll (PHB)
+echo
+dpll (PEC)
+echo
+dpll (PFC)
+echo
+dpll (PGC)
+echo
+dpll (PHC)
+echo
+dpll (PED)
+echo
+dpll (PFD)
+echo
+dpll (PGD)
+echo
+dpll (PHD)
+echo
+echo We should find 1 home not entailed that belongs to the Pratt's or 'P'
+dpll !(PEA)
+echo
+dpll !(PFA)
+echo
+dpll !(PGA)
+echo
+dpll !(PHA)
+echo
+dpll !(PEB)
+echo
+dpll !(PFB)
+echo
+dpll !(PGB)
+echo
+dpll !(PHB)
+echo
+dpll !(PEC)
+echo
+dpll !(PFC)
+echo
+dpll !(PGC)
+echo
+dpll !(PHC)
+echo
+dpll !(PED)
+echo
+dpll !(PFD)
+echo
+dpll !(PGD)
+echo
+dpll !(PHD)
+echo
+dpll !(ZHD)
+echo
+echo
+dpll (AE)
+dpll (BE)
+dpll (CE)
+dpll (DE)
+dpll (AF)
+dpll (BF)
+dpll (CF)
+dpll (DF)
+dpll (AG)
+dpll (BG)
+dpll (CG)
+dpll (DG)
+dpll (AH)
+dpll (BH)
+dpll (CH)
+dpll (DH)
+dpll (IA)
+dpll (IB)
+dpll (IC)
+dpll (ID)
+dpll (KA)
+dpll (KB)
+dpll (KC)
+dpll (KD)
+dpll (PA)
+dpll (PB)
+dpll (PC)
+dpll (PD)
+dpll (ZA)
+dpll (ZB)
+dpll (ZC)
+dpll (ZD)
+dpll (IE)
+dpll (IF)
+dpll (IG)
+dpll (IH)
+dpll (KE)
+dpll (KF)
+dpll (KG)
+dpll (KH)
+dpll (PE)
+dpll (PF)
+dpll (PG)
+dpll (PH)
+dpll (ZE)
+dpll (ZF)
+dpll (ZG)
+dpll (ZH)
+dpll (!AE)
+dpll (!BE)
+dpll (!CE)
+dpll (!DE)
+dpll (!AF)
+dpll (!BF)
+dpll (!CF)
+dpll (!DF)
+dpll (!AG)
+dpll (!BG)
+dpll (!CG)
+dpll (!DG)
+dpll (!AH)
+dpll (!BH)
+dpll (!CH)
+dpll (!DH)
+dpll (!IA)
+dpll (!IB)
+dpll (!IC)
+dpll (!ID)
+dpll (!KA)
+dpll (!KB)
+dpll (!KC)
+dpll (!KD)
+dpll (!PA)
+dpll (!PB)
+dpll (!PC)
+dpll (!PD)
+dpll (!ZA)
+dpll (!ZB)
+dpll (!ZC)
+dpll (!ZD)
+dpll (!IE)
+dpll (!IF)
+dpll (!IG)
+dpll (!IH)
+dpll (!KE)
+dpll (!KF)
+dpll (!KG)
+dpll (!KH)
+dpll (!PE)
+dpll (!PF)
+dpll (!PG)
+dpll (!PH)
+dpll (!ZE)
+dpll (!ZF)
+dpll (!ZG)
+dpll (!ZH)
