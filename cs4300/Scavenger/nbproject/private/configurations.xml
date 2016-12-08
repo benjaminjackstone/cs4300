@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../aicode" name="0">
+      <df name="cs4300-code-ai">
+        <df name="bin">
+          <df name="00bin-g">
+          </df>
+          <df name="00bin-gp">
+          </df>
+          <df name="00bin-o">
+          </df>
+          <df name="ScavengerWorlds">
+            <df name="worlds-2012">
+            </df>
+            <df name="worlds-2013">
+            </df>
+            <df name="worlds-2014">
+              <df name="learning-worlds">
+              </df>
+              <df name="online-worlds">
+              </df>
+              <df name="search-worlds">
+              </df>
+            </df>
+            <df name="worlds-2015">
+              <df name="learning-worlds">
+              </df>
+              <df name="online-worlds">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="include">
+          <df name="Agent">
+            <df name="Abalone">
+              <in>AbaloneAction.h</in>
+              <in>AbaloneAgent.h</in>
+              <in>AbaloneBasicBoard.h</in>
+              <in>AbaloneDisplayDriver.h</in>
+              <in>AbaloneEnvironment.h</in>
+              <in>AbaloneEnvironmentDisplay.h</in>
+              <in>AbaloneEnvironmentDriver.h</in>
+            </df>
+            <df name="Candy">
+              <in>CandyAction.h</in>
+              <in>CandyAgent.h</in>
+              <in>CandyDisplayDriver.h</in>
+              <in>CandyEnvironment.h</in>
+              <in>CandyEnvironmentDisplay.h</in>
+              <in>CandyEnvironmentDriver.h</in>
+            </df>
+            <df name="CCheckers">
+              <in>CCheckersAction.h</in>
+              <in>CCheckersAgent.h</in>
+              <in>CCheckersBasicBoard.h</in>
+              <in>CCheckersDisplayDriver.h</in>
+              <in>CCheckersEnvironment.h</in>
+              <in>CCheckersEnvironmentDisplay.h</in>
+              <in>CCheckersEnvironmentDriver.h</in>
+            </df>
+            <df name="Mancala">
+              <in>MancalaAction.h</in>
+              <in>MancalaAgent.h</in>
+              <in>MancalaBoard.h</in>
+              <in>MancalaDisplayDriver.h</in>
+              <in>MancalaEnvironment.h</in>
+              <in>MancalaEnvironmentDisplay.h</in>
+              <in>MancalaEnvironmentDriver.h</in>
+            </df>
+            <df name="Scavenger">
+              <in>ScavengerAction.h</in>
+              <in>ScavengerAgent.h</in>
+              <in>ScavengerBase.h</in>
+              <in>ScavengerCell.h</in>
+              <in>ScavengerCellInterface.h</in>
+              <in>ScavengerDisplayDriver.h</in>
+              <in>ScavengerEnvironment.h</in>
+              <in>ScavengerEnvironmentDisplay.h</in>
+              <in>ScavengerEnvironmentDisplay3D.h</in>
+              <in>ScavengerEnvironmentDriver.h</in>
+              <in>ScavengerEnvironmentModel.h</in>
+              <in>ScavengerHover.h</in>
+              <in>ScavengerLocation.h</in>
+              <in>ScavengerModel.h</in>
+              <in>ScavengerObject.h</in>
+              <in>ScavengerTexture.h</in>
+            </df>
+            <df name="TicTacToe">
+              <in>TTTAction.h</in>
+              <in>TTTAgent.h</in>
+              <in>TTTBoard.h</in>
+              <in>TTTDisplayDriver.h</in>
+              <in>TTTEnvironment.h</in>
+              <in>TTTEnvironmentDisplay.h</in>
+              <in>TTTEnvironmentDriver.h</in>
+            </df>
+            <df name="Wumpus">
+              <in>WumpusAction.h</in>
+              <in>WumpusAgent.h</in>
+              <in>WumpusDisplayDriver.h</in>
+              <in>WumpusEnvironment.h</in>
+              <in>WumpusEnvironmentDisplay.h</in>
+              <in>WumpusEnvironmentDriver.h</in>
+              <in>WumpusObjects.h</in>
+            </df>
+            <df name="XY">
+              <in>XYAction.h</in>
+              <in>XYAgent.h</in>
+              <in>XYEnvironment.h</in>
+              <in>XYEnvironmentDisplay.h</in>
+              <in>XYLocation.h</in>
+              <in>XYObject.h</in>
+            </df>
+            <in>Action.h</in>
+            <in>Agent.h</in>
+            <in>AgentDriver.h</in>
+            <in>AgentProgram.h</in>
+            <in>DisplayDriver.h</in>
+            <in>Environment.h</in>
+            <in>EnvironmentDisplay.h</in>
+            <in>EnvironmentDriver.h</in>
+            <in>FileDescriptor.h</in>
+            <in>Location.h</in>
+            <in>Message.h</in>
+            <in>Object.h</in>
+            <in>Options.h</in>
+            <in>Percept.h</in>
+            <in>PerceptAtom.h</in>
+            <in>RandomNumber.h</in>
+            <in>Socket.h</in>
+          </df>
+          <df name="CSP">
+            <in>Constraint.h</in>
+            <in>Domain.h</in>
+            <in>Problem.h</in>
+            <in>Relation.h</in>
+            <in>Scope.h</in>
+            <in>Value.h</in>
+            <in>Variable.h</in>
+          </df>
+          <df name="FOL">
+            <in>KnowledgeBase.h</in>
+            <in>Parser.h</in>
+            <in>Sentence.h</in>
+            <in>Symbol.h</in>
+          </df>
+          <df name="LocalSearch">
+            <in>Algorithm.h</in>
+            <in>FirstChoice.h</in>
+            <in>HillClimbing.h</in>
+            <in>Problem.h</in>
+            <in>SimulatedAnnealing.h</in>
+            <in>State.h</in>
+          </df>
+          <df name="PL">
+            <in>KnowledgeBase.h</in>
+            <in>KnowledgeBaseFast.h</in>
+            <in>Sentence.h</in>
+            <in>Symbol.h</in>
+          </df>
+          <df name="Search">
+            <in>AStarFrontier.h</in>
+            <in>Action.h</in>
+            <in>ActionStatePair.h</in>
+            <in>Algorithm.h</in>
+            <in>BFFrontier.h</in>
+            <in>ClosedList.h</in>
+            <in>DFFrontier.h</in>
+            <in>DLFrontier.h</in>
+            <in>Frontier.h</in>
+            <in>Graph.h</in>
+            <in>GreedyFrontier.h</in>
+            <in>Node.h</in>
+            <in>Problem.h</in>
+            <in>Solution.h</in>
+            <in>State.h</in>
+            <in>Tree.h</in>
+            <in>UCFrontier.h</in>
+          </df>
+          <df name="Support">
+            <in>logging.h</in>
+          </df>
+          <in>ai_abalone.h</in>
+          <in>ai_agent.h</in>
+          <in>ai_candy.h</in>
+          <in>ai_ccheckers.h</in>
+          <in>ai_csp.h</in>
+          <in>ai_fol.h</in>
+          <in>ai_glut.h</in>
+          <in>ai_local_search.h</in>
+          <in>ai_mancala.h</in>
+          <in>ai_pl.h</in>
+          <in>ai_scavenger.h</in>
+          <in>ai_search.h</in>
+          <in>ai_tictactoe.h</in>
+          <in>ai_wumpus.h</in>
+          <in>ai_xy.h</in>
+        </df>
+        <df name="lib">
+          <df name="00lib-g">
+          </df>
+          <df name="00lib-gp">
+          </df>
+          <df name="00lib-o">
+          </df>
+        </df>
+      </df>
+      <df name="cs4300-code-ai-agents">
+        <df name="build">
+          <df name="linux">
+            <df name="prog">
+              <df name="Abalone">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="Candy">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="CCheckers">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="FOLTest">
+              </df>
+              <df name="Mancala">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="Maze">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="Numbers">
+              </df>
+              <df name="PLTest">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="Rectangle">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="ScavengerWorld">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="TicTacToe">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="utils">
+                <df name="00obj-o">
+                </df>
+              </df>
+              <df name="WumpusWorld">
+                <df name="00obj-o">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="prog">
+          <df name="Abalone">
+            <in>AbaloneAgent.cpp</in>
+            <in>AgentProgramSelect.cpp</in>
+            <in>RandomPick.cpp</in>
+            <in>RandomPick.h</in>
+            <in>aiSampleRandom.cpp</in>
+            <in>aiSampleRandom.h</in>
+          </df>
+          <df name="Candy">
+            <in>AgentProgramSelect.cpp</in>
+            <in>Augustus.cpp</in>
+            <in>Augustus.h</in>
+            <in>CandyAgent.cpp</in>
+          </df>
+          <df name="CCheckers">
+            <in>AgentProgramSelect.cpp</in>
+            <in>CCheckersAgent.cpp</in>
+            <in>CCheckersBasicBoard.cpp</in>
+            <in>Dumbo1.cpp</in>
+            <in>Dumbo1.h</in>
+            <in>Dumbo2.cpp</in>
+            <in>Dumbo2.h</in>
+            <in>Pikachu.cpp</in>
+            <in>Pikachu.h</in>
+            <in>RandomPick.cpp</in>
+            <in>RandomPick.h</in>
+            <in>Smarty.cpp</in>
+            <in>Smarty.h</in>
+          </df>
+          <df name="FOLTest">
+            <in>FOL_Test.cpp</in>
+          </df>
+          <df name="Mancala">
+            <in>AgentProgramSelect.cpp</in>
+            <in>MancalaAgent.cpp</in>
+            <in>aiSampleAlphaBeta.cpp</in>
+            <in>aiSampleAlphaBeta.h</in>
+            <in>aiSampleAlphaBetaRandom.cpp</in>
+            <in>aiSampleAlphaBetaRandom.h</in>
+            <in>aiSampleAlphaBetaRandomEvaluation.cpp</in>
+            <in>aiSampleAlphaBetaRandomEvaluation.h</in>
+            <in>aiSampleManual.cpp</in>
+            <in>aiSampleManual.h</in>
+            <in>aiSampleMaximum.cpp</in>
+            <in>aiSampleMaximum.h</in>
+            <in>aiSampleMinimax.cpp</in>
+            <in>aiSampleMinimax.h</in>
+            <in>aiSampleMinimaxEvaluation.cpp</in>
+            <in>aiSampleMinimaxEvaluation.h</in>
+            <in>aiSampleMinimaxRandom.cpp</in>
+            <in>aiSampleMinimaxRandom.h</in>
+            <in>aiSampleRandom.cpp</in>
+            <in>aiSampleRandom.h</in>
+          </df>
+          <df name="Maze">
+            <in>MazeAction.cpp</in>
+            <in>MazeAction.h</in>
+            <in>MazeDriver.cpp</in>
+            <in>MazeGenerator.cpp</in>
+            <in>MazeModel.cpp</in>
+            <in>MazeModel.h</in>
+            <in>MazeProblem.cpp</in>
+            <in>MazeProblem.h</in>
+            <in>MazeSolver.cpp</in>
+            <in>MazeState.cpp</in>
+            <in>MazeState.h</in>
+          </df>
+          <df name="Numbers">
+            <in>NumbersAction.cpp</in>
+            <in>NumbersAction.h</in>
+            <in>NumbersDriver.cpp</in>
+            <in>NumbersProblem.cpp</in>
+            <in>NumbersProblem.h</in>
+            <in>NumbersSolver.cpp</in>
+            <in>NumbersState.cpp</in>
+            <in>NumbersState.h</in>
+          </df>
+          <df name="PLTest">
+            <in>PL_Dragons.cpp</in>
+            <in>PL_Dragons_2012.cpp</in>
+            <in>PL_Shell.cpp</in>
+            <in>PL_Test.cpp</in>
+            <in>PL_Wumpus.cpp</in>
+          </df>
+          <df name="Rectangle">
+            <in>RectAction.cpp</in>
+            <in>RectAction.h</in>
+            <in>RectDriver.cpp</in>
+            <in>RectProblem.cpp</in>
+            <in>RectProblem.h</in>
+            <in>RectState.cpp</in>
+            <in>RectState.h</in>
+            <in>RectangleSolver.cpp</in>
+          </df>
+          <df name="ScavengerWorld">
+            <in>AgentProgramSelect.cpp</in>
+            <in>Manual.cpp</in>
+            <in>Manual.h</in>
+            <in>ScavengerAgent.cpp</in>
+            <in>ScavengerPerceptsAndParsing.cpp</in>
+            <in>Snorlax.cpp</in>
+            <in>Snorlax.h</in>
+            <in>State.cpp</in>
+            <in>cell.cpp</in>
+            <in>cell.h</in>
+            <in>model.cpp</in>
+            <in>model.h</in>
+            <in>problem.cpp</in>
+            <in>problem.h</in>
+            <in>state.h</in>
+          </df>
+          <df name="TicTacToe">
+            <in>AgentProgramSelect.cpp</in>
+            <in>TicTacToeAgent.cpp</in>
+            <in>aiSampleManual.cpp</in>
+            <in>aiSampleManual.h</in>
+            <in>aiSampleMaximum.cpp</in>
+            <in>aiSampleMaximum.h</in>
+            <in>aiSampleMinimax.cpp</in>
+            <in>aiSampleMinimax.h</in>
+            <in>aiSampleRandom.cpp</in>
+            <in>aiSampleRandom.h</in>
+          </df>
+          <df name="utils">
+          </df>
+          <df name="WumpusWorld">
+            <in>AgentProgramSelect.cpp</in>
+            <in>Aristotle.cpp</in>
+            <in>Aristotle.h</in>
+            <in>Simpleton.cpp</in>
+            <in>Simpleton.h</in>
+            <in>WumpusAgent.cpp</in>
+          </df>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile></projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>../aicode/cs4300-code-ai/bin/00bin-o</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

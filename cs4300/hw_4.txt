@@ -1,0 +1,9 @@
+
+Optimization = |(calculated - actual)|/ calculated
+		.5 > Optimization >= .25 -- PM
+		.25 > Optimization >= 0 -- PM
+		Optimization >= .5 -- PM
+
+
+I assume we can only optimize for one or the other but not both. the runtime for the performance measure on the goal-based or the reflex agent
+would be constrained by a time-limit and by searching paths within a certain grid or radius of the straight-line hypotenuse drawn from staring point to desired point, or until the nearest paths or major highways are found.

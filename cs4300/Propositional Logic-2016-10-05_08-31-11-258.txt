@@ -1,0 +1,104 @@
+http://www.logic-puzzles.org/game.php?u2=1e8b18b4b0b1a6e016279c710dce2b87
+#Story
+	Porter is a "tiny home" enthusiast - he builds small, portable homes and sells 
+them to others interested in the movement. Using only the clues below, determine the size 
+and cost of each of his customer's tiny homes, as well as the city it will be delivered to.
+
+
+# Home Owners 
+# Davidson, Kirby, Pratt, Zimmerman
+
+#Home Sizes
+# 95, 110, 125, 140
+# sizes are E, F, G, H respectively
+
+# Costs
+# 25k, 32.25k, 35k, 36k
+#prices represented as A, B, C, D respectively
+
+# Question: Size and Cost and Location of tiny home? 
+
+# # Clues: 
+	1. The Pratt's house is either the 95 sq ft home or the $35,000 home.
+	2. The four houses are the 110 sq ft structure, the $25,000 house, the Kirby's 
+	home and the Pratt's home.
+	3. The Davidson's home is 15 sq ft larger than the $25,000 house.
+	4. The Davidson's house sold for $36,000.
+	5. The 140 sq ft structure sold for $35,000.
+
+# Glossary of terms 
+# FC	: (F)amily and (C)ost of home 4*4
+# FS	: (F)amily and (S)ize of home 4*4
+# FCS	: (F)amily and (C)ost and (S)ize 4*4*4
+
+# for example: 
+
+# Clues 
+# 1 tell (PE | PC) & (!PF & !PG & !PH & !PA & !PB & !PD) 
+# 2 tell (??F & ??A & K?? & P??) & (!KF & !KA & !PF & !PA)  # ? is a customer or a size or a price
+# 3 tell (D(?-15) == ?A) !DE & !DA cause its larger than nothing # ? is a size
+# 5 tell DD & !DA & !DB & !DC
+# 4 tell HC & !HA & !HB & !HD
+
+# Encoded in the question
+
+dpll DF
+dpll KF
+dpll PF
+dpll ZF
+
+dpll !DF
+dpll !KF
+dpll !PF
+dpll !ZF
+
+dpll DA
+dpll KA
+dpll PA
+dpll ZA
+
+dpll !DA
+dpll !KA
+dpll !PA
+dpll !ZA
+
+dpll KA
+dpll KB
+dpll KC
+dpll KD
+
+dpll !KA
+dpll !KB
+dpll !KC
+dpll !KD
+
+dpll KE
+dpll KF
+dpll KG
+dpll KH
+
+dpll !KE
+dpll !KF
+dpll !KG
+dpll !KH
+
+
+dpll PA
+dpll PB
+dpll PC
+dpll PD
+
+dpll !PA
+dpll !PB
+dpll !PC
+dpll !PD
+
+dpll PE
+dpll PF
+dpll PG
+dpll PH
+
+dpll !PE
+dpll !PF
+dpll !PG
+dpll !PH

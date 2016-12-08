@@ -1,0 +1,45 @@
+Performance Measure
+Environment
+Actuators (physical/tangible) - Actions (logical)
+Sensors (pre-processors)
+	Percept is the distilled information that comes from the sensors
+
+Environment -- Partially Observable (can't see everything that is needed) / Fully Observable (senses everything that is neededf)
+
+Actions -- Deterministic (given actions always produce a given result) / Stochastic (choas, randomness, not 100% efficiency/accuracy)
+
+Actions -- Episodic (finite contained time period) / Sequential (things happen in a certain order)
+
+Sensors -- Discrete (broken up into chunks, integers, finite amount of percepts, time is discrete) / Continuous (real numbers, percepts are constantly streaming to the agent in time)
+
+Environment -- Static (not moving, environment isn't changing unless the agent acts on it) / Dynamic (moving) 
+
+Environment -- Single (no other agent to interact with) / Multi-agent (team or adversarial agents in the environment)
+	An agent is something with a performance measure
+Known (the agent knows what it means when ana action happens) / unknown (the agent doesn't know what happens when an action is taken)
+
+the GPS navigation is most definitely partially observable.  As soon as a road is mapped and stored, there could be a new road that is built.  there is also construction that stops and starts that
+is impossible for the agent to always know.  the agent also can't account for other drivers and the routes they are taking, thus it can't predict traffic patterns and make route suggestions based 
+on all the desired information.
+
+It is also stochastic for most of the reasons listed under why it is partially observable.  there are so many variables that it can't account for.  there is a lot of randomness in traffic accidents
+and construction work.  It could be in a sense deterministic because a given route is always going to have the same exact distance each time as long as the user follows the prompts. However, the ETA
+is always stochastic.  too much randomness never allows for a 100% accurate ETA.
+
+I would say that the agent is episodic because it looks at all the information it has, to include reported traffic and construction etc, then makes the entire route suggestion at one time.  the
+agent may update the user with a new route as new information comes into play, but even so, at that time the agent looks at all the info and makes the entire route guidance at one time.  For
+it to be sequential, it would have to only know or only give a suggestion one turn in advance or one mile in advance etc...
+
+for the fact that the GPS is constantly monitoring traffic reports and patterns, Id say the agent is continuous.  the agent is always searching for new routes to nearby POIs.  It is always 
+preparing itself to make suggestions to the user based on the ir current position or distance to the destination.
+
+the environment is definitely dynamic because the world around us is always changing regardless if the agent is acting upon it or not.  the car could be parked for months on the corner while a new building
+is constructed and thus the environment has changed without the agent doing anything.
+
+this is a multi-agent environment due to the fact that other agents are inside of the environment that could either be helping or hurting the GPS.  like an agent that is in charge of the traffic lights,
+or an agent that is affecting prices of gasoline and thus affecting suggestions for gas stations from the GPS.
+
+this is a little of both.  the GPS can know when a user follows a specific route and what time it arrives vs its ETA.  however, it can't know if it detected an accident or traffic and it recommends alternate routes
+if that new route was actually faster or if the traffic actually existed as was reported.
+
+Homework is to take my GPS environment and justify whether it meets these criteria and how it can become the more desirable.

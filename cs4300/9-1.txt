@@ -1,0 +1,30 @@
+Searching
+---------
+
+State:
+	which room
+	suck on/off
+	clean state of all rooms
+
+actions don't loop back to parent states even though the action might lead to the same values as the paren state.
+
+CurrState --> Actions --> NewState (Model will tell agent what world is like as a result of action) --> GoalState 
+
+Model
+-----
+Path from CurrState to GoalState -- sequence of actions
+
+b = average branching factor (some levels might not have all the actions available)
+
+d = depth of the shallowest goal state
+
+m = maximum depth of the search tree
+
+b^d is the number of nodes that are generated in the
+
+BFS memory O(b^d) speed O(b^d)
+
+DFS memory O(bm) speed O(b^m)
+
+
+

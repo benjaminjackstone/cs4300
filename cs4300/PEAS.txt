@@ -1,0 +1,28 @@
+Agent - a GPS navigation system
+
+Performance Evaluation
+	minimize travel time and distance
+Environment
+	all roads in a given area
+	all points of interest in applicable area
+	drivers, passengers, 
+	construction
+	vehicles
+	stoplights
+	road lanes
+	road signs
+	buildings
+	nature
+Actions
+	output one or many route(s)
+	output one or many POI(s)
+	output course-corrections
+Sensors
+	speedometer
+	previous routes
+	user input (entering address or POIs, setting favorites)
+	database of existing/known POIs' addresses
+	off-route detection
+	speed limits
+	traffic
+	construction

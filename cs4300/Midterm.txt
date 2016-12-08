@@ -1,0 +1,21 @@
+AGents and Environments: 
+	7 Classification
+	PEAS
+	Percept and Action
+	Code inside the model vs problem.  
+Search:
+	BF DF DL ID GR A*
+	Tree vs Graph
+	Table
+	Depth First preferrable if answer is always at the leaf
+	Depth First never on infinite trees
+	DL and ID gets benefit of BF and DF by cutting off infinity
+
+Propositional Logic:
+	Physics, Instance Information, Knowledge Base
+	Entailments TTE: Q is true everywhere that KB is true, it can be true in other truth assisgnments
+	Question
+	Proof by Contradiction: if KB & !Q then not satisfiable ->one model of truth assigments that makes statement true. Opposite for not satisfiable
+
+Adversarial Search:
+	

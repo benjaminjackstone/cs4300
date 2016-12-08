@@ -1,0 +1,20 @@
+Exam Material
+
+Local Search
+------------
+hill climbing -- search neighboring states
+		only local max, not global
+Random Restart
+
+Best Neighbor
+	Randomly choose from equally good neighbors
+	Weighted choices based on slopes
+	Randomly choose from exact same neghbor states
+
+--;Run some test cases with a defined dimension and see if it makes a difference when you rreach a 
+	mesa or plateau.  Keep it small if negligible or high enough to make the difference.
+--If there are ragged edges along a slope, you must allow for negative slopes in the random selection
+
+Simulated Annealing
+	--taken from metalurgy
+	--slowly allow for a tight packing of the molecules

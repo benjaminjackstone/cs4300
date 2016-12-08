@@ -1,0 +1,77 @@
+performance measure needs to have an actual mathematical formula and number assigned to it.
+
+outcome 1
+
+outcome 2
+
+outcome 3
+
+.
+.
+.
+outcome n
+
+take an arbitrary outcome and compare it with another outcome and say whether it is worse, as good as, or better using the performance measure formula
+
+Reflex Agent -- it reacts to an environment
+PROS
+	low CPU demand
+	low complexity
+	predictable
+
+CONS
+	not dynamic
+	limited complexity
+	creator provides the reflexes
+	can't handle change
+
+***Their can be learning agents that will try and code itself a new reflex
+
+Goal-based Agents -- yes/no to accomoplishing the agents goal.  binary.  planning to reach its goal state
+	Model for the environment.  Software structure.  understanding what will happen when an action or what probability is there when action is taken place.
+	
+
+Utility-based Agents -- what's the difference between goal and utility?
+	have a Model of the world and understand how an action affects the world, but it doesn't have a defined goal. it just wants to perform its best always and continually
+	goal-based wants an A but a utility wants to do its best.  95% vs 98% A.  goal based, those are the same, but for utiltiy, it wants the 98%. 
+
+
+The reflex agent in the GPS environment would be very efficient and very fast.  As the GPS complexity can easily approach O(N!), complex algorithms are created to cut out the fat and try to 
+cut down that run time.  A relfex agent would be a good way to do that.  The agent would always just assume that the closest navigable street would be the quickest way back and if the user would
+detour from the original route, it would just reflexively re-route using that nearest street.  It could also give POIs based on a general location, or near a given location.  This would be less accurate
+but allow for quick, easy, static reactions.  One pro for this agent in this world be that if the agent ever came across an "unknown" street or part of its world, or if it loses its connectivity, it can easily just
+always react by re-routing back to the original route or last of detour, no matter how off course.  if it ever detected it was back in its observable world, it can just assume the nearest street is the quickest detour back or just 
+that it needs to output an entire new route based on that current location.  the major setback of these is that speed and distance isn't at all optimized.  the routing is just pulled from a database of pre-known routes, or just finds 
+a route that has some sort of probability to be good.  this isn't guaranteeing the shortest or the quickest path.  although since finding the shortest path is technically NP-complete, maybe this is a good way to go.
+
+the Goal-Based agent would probably be the best way to go in a GPS environment.  going back to the traveling salesman, the goal-based agent wouldn't need to find the shortest path, just one that met its goal.  this would guarantee that 
+the runtime doesn't exceed a certain amount, but also affords some sort of optimization and dynamism.  A user would likely want the agent to think about the performance measure constantly.  this would call for more than just a reactionary agent.
+this agent would have to diligently monitor roads, traffic, accidents, etc..  to continue to update ETAs and re-routing in real-time. also, it would have the capability of actually finding POIs based on the performance measure.  the closest POIs in
+distance doesn't mean the closest in drive time.  It  might on a one-way street or along traffic or an accident.  a goal-based agent would make sure to factor all this in and look at each route leading to a POI until it could meet its goal.  A con to a 
+goal-based agent would be that if connectivity was lost, or if it was outdated, it would lost its ability to optimize by "overthinking" or possibly actually increase distance or time constraints.
+
+the utility-based agent would be amazing in its concept.  however, an agent that isn't satisfied before it reaches a certain point in an non-polynomial problem, will theoretically never stop searching for a solution.  however, drivers usually are never satisfied
+until they have found the absolute best route from point a to point b.  they always want the shortest, fastest, and most scenic.  a utility-based agent would be optimal to satisfy almost every human's desire when it comes to the road.  a utility-based agent would search every
+path in its oobservable world, search every POI, search every traffic report, look at every stop sign, look at every speed limit, and then make its decision after the best decision was found.  the only drawback of course, as previously discussed, is that this is impossible.
+
+
+Performance Measure Math:
+
+kids alive at the end of the day 0 - n(how many kids?) KA
+house clean (not binary, scaled) HC = 10(FR) + 5(BR) + KR
+	+front room 1 - 10 scales FR
+	+bathroom		  BR
+	+kitchen		  KR
+	etc...
+
+So performance measure: PM = 100,000(KA) + HC
+	add a multiplier to KA drastically high to make syure agent knows thats most important
+
+minimize time and distance.  s = d/t
+				t = d/s
+				s*t = d
+we can take the first derivatives of each equation to minimize for distance and time
+	this equation is easy because there isn't really more to the measure that pre-measured distances and set speed limits.  the agent can easily do the math for each road and calculate
+	the time by adding all the distances / speed limits for each road.  if we want to optimize for shortest distance we don't even need to do any math, we just need to add up the distances
+	along the route and order them and take the smallest one. so SD = min(dist).  we can also use the first derivatives to minimize for both time and distance but it seems quicker to solve each one
+	

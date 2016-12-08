@@ -1,0 +1,66 @@
+agent needs to find a path to the goal
+
+Program()
+  parse Percepts();
+  update agent stuff
+  if queue empty:
+	search for path
+	store path in queue
+  action = queue.pop()
+  return action
+
+Once the agent is at the goal, the agent needs to search for a path back home.
+
+add to above code***
+if at base:
+	search for path to goal
+elif at goal:
+	search path to home
+else:
+	push Quit on the queue
+
+Adversarial Search:
+	2 player
+	turn based
+	zero-sum -- the amount win by is amount the other loses by
+	perfect information -- fully observable
+	CHECKERS
+	 +fully observable
+	 +static
+	 +multi-player
+	 +deterministic do they what happens upon execution of an action
+	 +sequential
+	 +known -- know the rules and actions
+	 +discrete
+	  some actions chosen by one agent and other actions chosen by the adversary and fall in the same search tree
+	  game terminations can occur at various levels
+	
+	the complexity gets to be really high on these searches so we deal with this by:
+		--cutoff -- DLS / cutoff at a certain depth in the search tree
+		--utility -- hand it any state and this estimates how good the state is. These are similar to heuristics
+
+	min/max depth first search for the agent
+	b^m is constrained by giving a cutoff b^c
+		evaluation function is OK if the most desirable value is the chosen value
+	track alpha to throw away part of the tree
+	alpha is -infinity and is a copy of the value handed down at each level
+	at the root node the alpha updates to first return value as at least its minimum return value, then it updates as a greater value is brought to the root
+	if alpha at a min node is greater than return value, it prunes other branches from that min node
+	
+	Beta is inifinity
+	Beta is the highest value that an ancestor min node will return
+	Beta updates at min nodes and passes itself down to the children
+	Beta updates at max nodes to the lesser return value
+	
+	MAX:
+		if v > infinity:
+			infinity  = v
+		if v > beta:
+			return v
+	MIN:
+		if v < infinity:
+			return v
+		if v < beta:
+			beta = v
+
+	you can imporove the pruning if you can find a heuristic that can order the children

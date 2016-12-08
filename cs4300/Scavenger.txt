@@ -1,0 +1,32 @@
+The Performance measure
+PM = C + L
+	Collection = OM + IM(10) + SL(10000) + HLSC(10000)
+		Organic Material in grams
+		Inorganic Material in grams
+		Sentient Life in integers
+		Human Life Sustaining Compounds in integers
+       Life = BU + EM + SM
+These are based on an average programmed in by the creator. 10 means it went exactly the average and it scales down if it exceeds or goes less than the average each day.
+		Battery Usage 		scale 1 - 100
+		Engine Miles		scale 1 - 100
+		Self-maintenance	scale 1 – 100
+
+The Environment
+	The Scavenger’s environment consists of many unknowns. Actually it is all unknowns.  As it moves around it collects data on its environment each day and stores it as its environment.  This would include: local terrain, local life forms, local compounds and energy sources, local weather etc. Each time the agent moves location, it stores a planet’s environment in its archives then it cleans its memory to start fresh in a new planet.  Unless the planet or moon is in the same orbit or system, it would then keep and compare the new environment it finds with the other.
+The Actuators
+	These would include: the motor which rotate its ground movement tech or the nuclear cells which power its hover tech, the motor which power its take off, the thrusters which control movement in space and landing, the joints which enable its flexibility in various collection, the input data streams that allow its vision and cognition.
+The Sensors
+	These would include: Mass Spectrometer, scale, centrifuge, atomic collider, cameras, radar, Doppler weather, solar panels
+
+Classifications
+The Scavenger would be listed as partially observable, although it could more accurately be defined as blind.  This is because the worlds it is tasked to analyze or unknown, this is why its being tasked as such.  It is possible the agent is provided with a distant view of the orb and its surrounding cosmos, but not guaranteed.
+It is also stochastic.  From the terrain it traverses to the compounds it analyzes, it is mostly unknown.  The weather is unknown, the sources of energy are unknown.  All these are sure to bring chaos and randomness into the agent’s world.
+It is sequential because with so many potential unknowns, it might be wise for it do one operation and see what to do next and not assume the environment will be sterile while it acts episodically
+It is continuous because its movement is asymptotic and its entire world seemingly never-ending.
+This world can either be single or multi-agent. That is the mystery the scavenger is exploring.
+It also operates in an unknown world.  For all the reasons listed above, the agent doesn’t know what will happen when it interacts with another sentient being or what will happen when it powers down or it scoops up material to analyze.  It could be similar to those actions on earth or completely different.  The creator would be wise to allow the agent to write its own code as it explores a new orb.
+
+Design
+A reflex agent would be nice in these circumstances so the creator could predict its actions and have some reliability, but for the fact that the worlds it traverses will most likely change, a reflex agent would probably get the agent into trouble at some point.  The agent can’t really afford to even reflexively act on a situation and learn and re-write its code for a new reflex.  That one misstep could cost it its life.  This is why I would implement a utility-based agent.  
+First of all, I don’t just want it to meet a goal, I want it to keep searching each day until it reaches its maximum energy output determined by me.  I want it to keep finding more and more life-sustaining elements or compounds, I want it to keep learning from other sentient life forms until its resources are depleted.  This is large-scale and costly operation.  I want to get the most out of it as possible with as much data returned as possible.
+

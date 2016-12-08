@@ -1,0 +1,6 @@
+TEST REVIEW
+A*
+Proof by contradiction
+	dpll speeds up truth table by recognizing things that must be and pruning
+	using the KB. pure symbol heuristic.
+

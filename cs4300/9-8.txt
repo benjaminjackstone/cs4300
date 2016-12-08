@@ -1,0 +1,49 @@
+Uniform Cost Search (Dijkstra's)
+
+B:3
+C:2
+D:1 <-- start with this because it is a minimum cost
+
+K:4 + 1
+L:5 + 1
+M:6 + 1
+
+H:6 + 2
+I:5 + 2
+J:4 + 2
+
+E:5 + 3
+F:4 + 3
+G:6 + 3
+
+K:7 + 4 + 1
+J:6 + 4 + 2
+L:8 + 5 + 1
+F:2 + 4 + 3
+I:5 + 5 + 2
+M:9 + 6 + 1
+E:1 + 5 + 3 <-- GOAL = 9 cost (alpha order)
+H: 4 + 6 + 2
+G:3 + 6 + 3
+
+The frontier is the things that have been pushed and generated but haven't been goal-tested.
+	runtime  memory	complete (if there is a goal, will it find it) optimal
+
+DFS -- b^m, b*m, no, no
+
+BFS -- b^d, b^d, yes, yes if c_i = c_j (meaning all edges are the same cost) else no
+
+UCS -- b^v, b^v, No if c_i >= 0 else yes if c_i > 0, yes -- v is the effective depth of the optimal goal. b^v = actual # generated, take log on each side to get v.
+
+UCS and BFS have the same memroy and run-time because they have to remember everything
+
+DLS -- b^l, b*l, yes L >= d, no
+
+IDS -- b^d, b*d, yes, same as bfs
+
+Depth Limited Search
+In an infinite tree and memory constraints:
+M = infintiy
+D = large, b^d > currMemory, d is known, l is an overestimate of d l >= d
+
+Iterative Deepening Search -- for loop around DLS where you increase l until you find a goal

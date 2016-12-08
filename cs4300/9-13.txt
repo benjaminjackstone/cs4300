@@ -1,0 +1,29 @@
+Tree Search vs. Graph Search
+
+WE need to try to eliminate duplicate states inside a tree.  The effect is called Graph Search. 
+
+Make a hash funciton or BST or a map to look up nodes that are seen.
+
+Graph:
+	Reducing 'b'
+	prune large portions
+
+A* Search
+
+Exhaustive Uniform Cost Search
+	start at the Goal State and work up.
+	I f we knew this information we could do the Priority Queue differently
+	Need an Oracle to know the cost of state to get to a goal
+Heuristic:
+	The best guess of cost from a state to a goal.  Hence the Oracle costs are heuristics
+	h(state) <= Cost_actual(state) -- admissible heuristic
+	get the heuristic as large as possible without overestimating!!!
+	brainstorm a few heuristics and choose the one that is largest if both admissible
+	PQ = g (cost thus far) + h (heuristic)
+
+
+UC
+	PQ : g
+
+Greedy
+	PQ : h

@@ -1,0 +1,13 @@
+clg::Maze::Model *the_model = new cgl::Maze::Model(maze_file);
+
+cgl::Maze::State *the__initial__state = new cgl::Maze::State();
+the_initiiooal_state->SetX(the-model->GetStartX());
+
+
+
+...
+
+
+Frontier *theAlgorithm = new BFFrontier(); //Curtis' code deletes the pointer out of our control so the pointer are allocated onto the heap with new
+
+

@@ -1,0 +1,21 @@
+Agents need to formalize its reasoning
+
+Propositional Logic
+-------------------
+Gourmet Diners
+
+met once a month
+
+6 diners april carla ellen
+	 basil derrick felix
+Layout
+	1	2
+3			4
+	5	6
+
+Q: Who is the president of the club?
+C: each of April and Basil sat on a woman's immediate left
+   each of Carla and Derek sat on a man's immediate right
+   each of Ellen and Felix sat directly across from a man
+   the president of the club sat on a woman's immediate left
+   	and directly across from a man

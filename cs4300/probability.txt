@@ -1,0 +1,17 @@
+independence in probability
+---------------------------
+two random variables
+cloudy and toothache
+
+Bayes' Rule
+------------
+two not independent variables
+evidence of the cause is measured by the effect
+don't know the cause so we can't get a probability of the effect efficiently
+
+domain expert needs to know what is the cause and what is the effect and get distribution values
+
+conditional is inverted * close ) / other
+
+p(m|s) = (p(s|m)p(m))/p(s)
+

@@ -1,0 +1,37 @@
+agent needs to find a path to the goal
+
+Program()
+  parse Percepts();
+  update agent stuff
+  if queue empty:
+	search for path
+	store path in queue
+  action = queue.pop()
+  return action
+
+Once the agent is at the goal, the agent needs to search for a path back home.
+
+add to above code***
+if at base:
+	search for path to goal
+elif at goal:
+	search path to home
+else:
+	push Quit on the queue
+
+Adversarial Search:
+	2 player
+	turn based
+	zero-sum -- the amount win by is amount the other loses by
+	perfect information -- fully observable
+	CHECKERS
+	 +fully observable
+	 +static
+	 +multi-player
+	 +deterministic do they what happens upon execution of an action
+	 +sequential
+	 +known -- know the rules and actions
+	 +discrete
+	  some actions chosen by one agent and other actions chosen by the adversary and fall in the same search tree
+	  game terminations can occur at various levels
+	    
